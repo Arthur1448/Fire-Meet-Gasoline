@@ -6,6 +6,9 @@ dash      = keyboard_check_pressed(vk_lshift)
 rshoot    = mouse_check_button_pressed(mb_right)
 lshoot	  = mouse_check_button_pressed(mb_left)
 
+restart   = keyboard_check_pressed(ord("R"))
+if(restart) room_restart()
+
 xdir = right - left
 
 no_chao = place_meeting(x, y + 1, obj_solido)

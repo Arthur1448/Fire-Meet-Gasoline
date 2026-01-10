@@ -1,5 +1,7 @@
 event_inherited();
 
+window_set_fullscreen(true)
+
 hp      = 100
 gas     = 100
 vel     = 3

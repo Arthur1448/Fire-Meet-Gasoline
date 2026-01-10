@@ -1,3 +1,5 @@
+display_set_gui_size(1366, 768);
+
 draw_sprite(spr_barra_fundo, 0, barra_hp_x, barra_hp_y)
 draw_sprite_stretched(spr_barra_hp, 0, barra_hp_x, barra_hp_y, (hp / 100) * barra_hp_w, barra_hp_h)
 draw_sprite(spr_borda_barra_hp, 0, barra_hp_x, barra_hp_y)
