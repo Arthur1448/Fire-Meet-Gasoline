@@ -5,6 +5,8 @@ jumpHold  = keyboard_check(ord("W")) or keyboard_check(vk_space)
 dash      = keyboard_check_pressed(vk_lshift)
 rshoot    = mouse_check_button_pressed(mb_right)
 lshoot	  = mouse_check_button_pressed(mb_left)
+scrdown   = mouse_wheel_down()
+scrup     = mouse_wheel_up()
 
 restart   = keyboard_check_pressed(ord("R"))
 if(restart) room_restart()
@@ -19,12 +21,14 @@ sprite_player()
 
 if(abs(point_direction(x, y, obj_mira.x, obj_mira.y) - 90) > 5)
 {
-	if(rshoot and gas >= 5) atirar_gasolina()
+	if(rshoot and gas[tipo_gas] >= 5) atirar_gasolina()
 	if(lshoot) atirar_faisca()
 }
 
 coletar_tanque()
 
 recuperar_gasolina()
+
+mudar_gasolina()
 
 definir_limites()

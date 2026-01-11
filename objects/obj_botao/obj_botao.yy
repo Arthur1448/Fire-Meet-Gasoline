@@ -12,8 +12,8 @@
   "name":"obj_botao",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Pais",
+    "path":"folders/Objetos/Pais.yy",
   },
   "parentObjectId":null,
   "persistent":false,

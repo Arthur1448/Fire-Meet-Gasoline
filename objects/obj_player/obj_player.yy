@@ -10,8 +10,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Player",
+    "path":"folders/Objetos/Player.yy",
   },
   "parentObjectId":{
     "name":"obj_colisao",
@@ -35,12 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_idle",
-    "path":"sprites/spr_player_idle/spr_player_idle.yy",
+    "name":"spr_player_idle_am",
+    "path":"sprites/spr_player_idle_am/spr_player_idle_am.yy",
   },
   "spriteMaskId":{
-    "name":"spr_player_idle",
-    "path":"sprites/spr_player_idle/spr_player_idle.yy",
+    "name":"spr_player_idle_am",
+    "path":"sprites/spr_player_idle_am/spr_player_idle_am.yy",
   },
   "visible":true,
 }

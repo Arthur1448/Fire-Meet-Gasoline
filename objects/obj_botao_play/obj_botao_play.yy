@@ -1,15 +1,17 @@
 {
   "$GMObject":"",
   "%Name":"obj_botao_play",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_botao_play",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao","path":"objects/obj_botao/obj_botao.yy",},"propertyId":{"name":"texto","path":"objects/obj_botao/obj_botao.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Jogar",},
   ],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"UI",
+    "path":"folders/Objetos/UI.yy",
   },
   "parentObjectId":{
     "name":"obj_botao",

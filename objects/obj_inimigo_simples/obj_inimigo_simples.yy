@@ -9,8 +9,8 @@
   "name":"obj_inimigo_simples",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Inimigos",
+    "path":"folders/Objetos/Inimigos.yy",
   },
   "parentObjectId":{
     "name":"obj_colisao",

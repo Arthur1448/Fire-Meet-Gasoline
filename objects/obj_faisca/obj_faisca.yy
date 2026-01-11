@@ -8,8 +8,8 @@
   "name":"obj_faisca",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Projetil",
+    "path":"folders/Objetos/Projetil.yy",
   },
   "parentObjectId":{
     "name":"obj_atiravel",

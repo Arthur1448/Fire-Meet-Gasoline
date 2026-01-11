@@ -1,12 +1,18 @@
 event_inherited();
 
-window_set_fullscreen(true)
+hp         = 100
+gas        = [100, 100, 100]
+vel        = 3
+velPulo    = 4
+grv        = 0.25
 
-hp      = 100
-gas     = 100
-vel     = 3
-velPulo = 4
-grv     = 0.25
+sprites = [
+	[spr_player_dash_am, spr_player_fall_am, spr_player_idle_am, spr_player_jump_am, spr_player_run_am], 
+	[spr_player_dash_ve, spr_player_fall_ve, spr_player_idle_ve, spr_player_jump_ve, spr_player_run_ve], 
+	[spr_player_dash_az, spr_player_fall_az, spr_player_idle_az, spr_player_jump_az, spr_player_run_az]
+]
+
+tipo_gas = 0 // 0 - fogo 1 - gosma 2 - gelo
 
 no_chao = false
 
@@ -69,12 +75,12 @@ function movimento_player()
 		}
 		velv += grv
 	}
-	if(dash and dashCount < dashMax and gas >= 5)
+	if(dash and dashCount < dashMax and gas[tipo_gas] >= 5)
 	{
 		dashCount += 1
 		dashTimer = 10
 		velh = image_xscale * velDash
-		gas -= 5
+		gas[tipo_gas] -= 5
 	}
 	if(dashTimer > 0) velv = 0
 	dashTimer = max(dashTimer - 1, 0)
@@ -91,38 +97,40 @@ function sprite_player()
 	else image_xscale = -1
 	if(dashTimer > 0)
 	{
-		sprite_index = spr_player_dash
+		muda_sprite(sprites[tipo_gas][0])
 	}
 	else if(no_chao)
 	{
 		if(velh == 0 and xdir == 0)
 		{
-			muda_sprite(spr_player_idle)
+			muda_sprite(sprites[tipo_gas][2])
 			image_speed = 1
 		}
 		else
 		{
 			image_speed = abs(velh) / 2.5
-			muda_sprite(spr_player_run)
+			muda_sprite(sprites[tipo_gas][4])
 		}
 	}
 	else
 	{
 		if(velv < 0)
 		{
-			muda_sprite(spr_player_jump)
+			muda_sprite(sprites[tipo_gas][3])
 		}
 		else
 		{
-			muda_sprite(spr_player_fall)
+			muda_sprite(sprites[tipo_gas][1])
 		}
 	}
 }
 
 function atirar_gasolina()
 {
-	instance_create_layer(x, y - 16, layer, obj_gasolina_normal)
-	gas -= 5
+	if(tipo_gas == 0) instance_create_layer(x, y - 16, layer, obj_gasolina_normal)
+	else if(tipo_gas == 1) instance_create_layer(x, y - 16, layer, obj_gasolina_gosma) 
+	else if(tipo_gas == 2) instance_create_layer(x, y - 16, layer, obj_gasolina_gelo) 
+	gas[tipo_gas] -= 5
 }
 
 function atirar_faisca()
@@ -135,8 +143,8 @@ function definir_limites()
 	if(velv > 4) velv = 4
 	if(hp < 0) hp = 0
 	if(hp > 100) hp = 100
-	if(gas < 0) gas = 0
-	if(gas > 100) gas = 100
+	if(gas[tipo_gas] < 0) gas[tipo_gas] = 0
+	if(gas[tipo_gas] > 100) gas[tipo_gas] = 100
 }
 
 function recuperar_gasolina()
@@ -145,7 +153,7 @@ function recuperar_gasolina()
 	if(frameTimer > 60)
 	{
 		frameTimer = 0
-		gas += 1
+		gas[tipo_gas] += 2
 	}
 }
 
@@ -154,8 +162,15 @@ function coletar_tanque()
 	var _tanque = instance_place(x, y, obj_tanque)
 	if(_tanque)
 	{
-		gas += 15
+		gas[tipo_gas] += 15
 		instance_destroy(_tanque)
 	}
 }
 
+function mudar_gasolina()
+{
+	if(scrdown)	tipo_gas += 1
+	if(scrup) tipo_gas -= 1
+	if(tipo_gas > 2) tipo_gas = 0
+	if(tipo_gas < 0) tipo_gas = 2
+}

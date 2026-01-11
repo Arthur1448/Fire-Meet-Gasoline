@@ -6,8 +6,8 @@
   "name":"obj_bloco_chao",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Chao-Parede",
+    "path":"folders/Objetos/Chao-Parede.yy",
   },
   "parentObjectId":{
     "name":"obj_solido",

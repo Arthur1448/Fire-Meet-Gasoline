@@ -1,19 +1,17 @@
 {
   "$GMObject":"",
   "%Name":"obj_gasolina_normal",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_gasolina_normal",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Projetil",
+    "path":"folders/Objetos/Projetil.yy",
   },
   "parentObjectId":{
-    "name":"obj_atiravel",
-    "path":"objects/obj_atiravel/obj_atiravel.yy",
+    "name":"obj_gasolina",
+    "path":"objects/obj_gasolina/obj_gasolina.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

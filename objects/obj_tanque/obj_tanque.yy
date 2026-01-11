@@ -6,8 +6,8 @@
   "name":"obj_tanque",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Coletavel",
+    "path":"folders/Objetos/Coletavel.yy",
   },
   "parentObjectId":null,
   "persistent":false,
