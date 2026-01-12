@@ -1,3 +1,5 @@
+if(global.pause) exit
+
 var _x = obj_player.x
 x = lerp(x, _x, 0.5)
 

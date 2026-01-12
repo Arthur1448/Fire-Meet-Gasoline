@@ -1,3 +1,5 @@
+if(global.pause) exit
+
 if(place_meeting(x + velh, y, obj_solido))
 {
 	while(!place_meeting(x + sign(velh), y, obj_solido))

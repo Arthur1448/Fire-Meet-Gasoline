@@ -1,3 +1,9 @@
+if(global.pause)
+{
+	image_speed = 0
+	exit
+} else image_speed = 1
+
 left      = keyboard_check(ord("A"))
 right     = keyboard_check(ord("D"))
 jumpPress = keyboard_check_pressed(ord("W")) or keyboard_check_pressed(vk_space)

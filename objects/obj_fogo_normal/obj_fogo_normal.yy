@@ -9,7 +9,10 @@
     "name":"Fogos",
     "path":"folders/Objetos/Fogos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_fogo",
+    "path":"objects/obj_fogo/obj_fogo.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

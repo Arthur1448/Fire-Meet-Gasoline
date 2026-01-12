@@ -12,7 +12,7 @@ function recebeu_gas(_tipo)
 
 function molhar()
 {
-	if(frameTimerGas < 120)
+	if(frameTimerGas < 240)
 	{
 		if(tipo == 0) image_blend = c_yellow
 		else if(tipo == 1) image_blend = c_green
@@ -37,7 +37,7 @@ function tocar_fogo()
 
 function tempo_fogo()
 {
-	if(frameTimerFogo < 120)
+	if(frameTimerFogo < 240)
 	{
 		pegando_fogo   = true
 		frameTimerFogo += 1
