@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gasolina_gelo",
-  "eventList":[],
+  "%Name":"obj_trail",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_gasolina_gelo",
+  "name":"obj_trail",
   "overriddenProperties":[],
   "parent":{
-    "name":"Projetil",
-    "path":"folders/Objetos/Projetil.yy",
+    "name":"Outros",
+    "path":"folders/Objetos/Outros.yy",
   },
-  "parentObjectId":{
-    "name":"obj_gasolina",
-    "path":"objects/obj_gasolina/obj_gasolina.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,13 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_gasolina_gelo",
-    "path":"sprites/spr_gasolina_gelo/spr_gasolina_gelo.yy",
-  },
-  "spriteMaskId":{
-    "name":"spr_gasolina_normal",
-    "path":"sprites/spr_gasolina_normal/spr_gasolina_normal.yy",
-  },
+  "spriteId":null,
+  "spriteMaskId":null,
   "visible":true,
 }

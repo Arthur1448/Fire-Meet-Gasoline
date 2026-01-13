@@ -1,2 +1,2 @@
-depth = 0
+depth = obj_player.depth - 1
 global.pause = false

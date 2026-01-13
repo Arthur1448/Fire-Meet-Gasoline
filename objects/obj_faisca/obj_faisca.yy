@@ -36,6 +36,9 @@
     "name":"spr_faisca",
     "path":"sprites/spr_faisca/spr_faisca.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_faisca",
+    "path":"sprites/spr_faisca/spr_faisca.yy",
+  },
   "visible":true,
 }

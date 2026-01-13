@@ -34,6 +34,9 @@
     "name":"spr_gasolina_gosma",
     "path":"sprites/spr_gasolina_gosma/spr_gasolina_gosma.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_gasolina_normal",
+    "path":"sprites/spr_gasolina_normal/spr_gasolina_normal.yy",
+  },
   "visible":true,
 }

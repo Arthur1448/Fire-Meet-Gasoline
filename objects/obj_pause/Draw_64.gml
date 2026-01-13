@@ -8,7 +8,5 @@ if(global.pause)
 	draw_rectangle(0, 0, w, h, false)
 	draw_set_alpha(1)
 	draw_set_colour(-1)
-	draw_text(600, 300, "Continuar")
-	draw_text(600, 332, "Voltar ao Menu Principal")
-	draw_text(600, 364, "Sair do Jogo")
+	draw_set_font(fnt_menu)
 }

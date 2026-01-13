@@ -4,5 +4,9 @@ if(pause_key) global.pause = !global.pause
 
 if(global.pause)
 {
-	
+	audio_pause_all()
+}
+else
+{
+	audio_resume_all()
 }

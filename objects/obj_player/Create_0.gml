@@ -21,10 +21,11 @@ jumpHoldFrames = 15
 jumpCount      = 0
 jumpMax        = 2
 
-velDash   = 15
-dashTimer = 0
-dashCount = 0
-dashMax   = 1
+velDash        = 7
+dashTimer      = 0
+dashHoldFrames = 10
+dashCount      = 0
+dashMax        = 1
 
 barra_hp_x = 100
 barra_hp_y = 50
@@ -78,12 +79,26 @@ function movimento_player()
 	if(dash and dashCount < dashMax and gas[tipo_gas] >= 5)
 	{
 		dashCount += 1
-		dashTimer = 10
-		velh = image_xscale * velDash
+		dashTimer = dashHoldFrames
+		dashDir   = point_direction(x, y, obj_mira.x, obj_mira.y)
 		gas[tipo_gas] -= 5
 	}
-	if(dashTimer > 0) velv = 0
-	dashTimer = max(dashTimer - 1, 0)
+	if(dashTimer > 0)
+	{
+		velh = lengthdir_x(velDash, dashDir)
+		velv = lengthdir_y(velDash, dashDir)
+		dashTimer--
+		jumpTimer = 0
+		with(instance_create_depth(x, y, depth + 1, obj_trail))
+		{
+			sprite_index = other.sprite_index
+			image_xscale = other.image_xscale
+			if(other.tipo_gas == 0) image_blend = c_yellow
+			else if(other.tipo_gas == 1) image_blend = c_green
+			else if(other.tipo_gas == 2) image_blend = c_blue
+			image_alpha  = 0.7
+		}
+	}
 	velh = lerp(velh, _velh, 0.2)
 }
 
@@ -140,7 +155,7 @@ function atirar_faisca()
 
 function definir_limites()
 {
-	if(velv > 4) velv = 4
+	if(velv > 5) velv = 5
 	if(hp < 0) hp = 0
 	if(hp > 100) hp = 100
 	if(gas[tipo_gas] < 0) gas[tipo_gas] = 0

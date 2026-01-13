@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gasolina_gelo",
-  "eventList":[],
+  "%Name":"obj_botao_sair",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_gasolina_gelo",
+  "name":"obj_botao_sair",
   "overriddenProperties":[],
   "parent":{
-    "name":"Projetil",
-    "path":"folders/Objetos/Projetil.yy",
+    "name":"UI",
+    "path":"folders/Objetos/UI.yy",
   },
   "parentObjectId":{
-    "name":"obj_gasolina",
-    "path":"objects/obj_gasolina/obj_gasolina.yy",
+    "name":"obj_botao",
+    "path":"objects/obj_botao/obj_botao.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,12 +33,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gasolina_gelo",
-    "path":"sprites/spr_gasolina_gelo/spr_gasolina_gelo.yy",
+    "name":"spr_botao_sair",
+    "path":"sprites/spr_botao_sair/spr_botao_sair.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_gasolina_normal",
-    "path":"sprites/spr_gasolina_normal/spr_gasolina_normal.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
