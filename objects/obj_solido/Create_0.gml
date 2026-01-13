@@ -2,12 +2,14 @@ tipo           = -1
 frameTimerGas  = 0
 frameTimerFogo = 0
 pegando_fogo   = false
-fogo = noone
+fogo           = noone
+com_gas        = false
 
 function recebeu_gas(_tipo)
 {
-	tipo       = _tipo
+	tipo          = _tipo
 	frameTimerGas = 0
+	com_gas       = true
 }
 
 function molhar()
@@ -18,12 +20,14 @@ function molhar()
 		else if(tipo == 1) image_blend = c_green
 		else if(tipo == 2) image_blend = c_aqua
 		frameTimerGas += 1
+		com_gas       = true
 	}
 	else 
 	{
-		image_blend = -1
-		tipo = -1
+		image_blend   = -1
+		tipo          = -1
 		frameTimerGas = 0
+		com_gas       = false
 	}
 }
 
